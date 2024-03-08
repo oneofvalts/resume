@@ -1,20 +1,32 @@
-\documentclass[11pt, a4paper, twocolumn]{memoir}
+\documentclass[oneside]{memoir}
 
-\setulmarginsandblock{2cm}{2cm}{*}
-\setlrmarginsandblock{2cm}{2cm}{*}
-\checkandfixthelayout{}
+\newlength{\pagew}
+\newlength{\pageh}
+\setlength{\pagew}{210mm}
+\setlength{\pageh}{297mm}
 
+\setlength{\headheight}{16pt}
+
+\setstocksize{\pageh}{\pagew}
+\settrimmedsize{\pageh}{\pagew}{*}
+\settypeblocksize{250mm}{150mm}{*}
+\setlrmargins{*}{*}{1}
+\setulmargins{*}{*}{1}
+\setmarginnotes{0cm}{0cm}{0cm}
+\checkandfixthelayout
+
+\usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
+\setmainfont{EB Garamond}
+\setmathfont{Garamond-Math.otf}[StylisticSet={7,9}]
+\setmonofont[Scale=MatchLowercase]{JetBrains Mono}
 \usepackage[letterspace=200]{microtype}
-\usepackage{enumitem}
-\usepackage[english]{babel}
 
-\usepackage{tgpagella}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[french]{babel}
+\usepackage{datetime2}
 
 \usepackage[
 unicode,
-pdftex,
 pdfpagelabels,
 bookmarks,
 hyperindex,
@@ -26,30 +38,33 @@ colorlinks]{hyperref}
 \twocolumn[
 \begin{@twocolumnfalse}
   \begin{center}
-    \textsc{\textls{Curriculum vitae}}\\
+    \textsc{\textls{Curriculum vitae}} \\
     \textit{of}\\
-    \textsc{\huge Abdullah Uyu}\\
+    \textsc{\huge Abdullah Uyu} \\
     \vspace{2ex}
-    {\small Alavardı Mahallesi, Fatih Caddesi, Topraksu Siteleri, 119/8,
-      42090, Meram/Konya.\\ \texttt{abdullahuyu@gmail.com}\quad +905531744219}\\
+    {\small Kordonboyu Mah.\ Ankara Cad.\ İstmarina S1 Kule No: 59
+      34860, Kartal/İstanbul. \\
+      \texttt{abdullahuyu@gmail.com}\quad +905531744219} \\
     \vspace{5ex}
   \end{center}
 \end{@twocolumnfalse}
 ]
-\section*{Profile}
-A self-disciplined, mathematics student, passionate about Logic,
-interested in interrelations between the akin areas such as Computer
-Sciences and Philosophy, capable of communicating and working in great
-efficiency with others, seeking mediums to learn and study more
-intuitionistic logic, proof assistants such as \texttt{Coq}, and modern
+\raggedright
+\section*{\textsc{Profile}}
+A self-disciplined mathematics senior passionate about Logic, interested
+in interrelations between the akin areas such as Computer Sciences,
+Philosophy and Linguistics, capable of communicating and working in great
+efficiency with others, seeking opportunities to learn and study more
+intuitionistic logic, proof assistants such as \texttt{Lean}, and modern
 foundations of mathematics such as \texttt{HoTT}.
-\section*{Education}
-Galatasaray University, Istanbul, Department of Mathematics,
-Faculty of Arts and Sciences, since \textit{September 2017}.\\ \\
-Osman Nuri Hekimoğlu Anatolian High School, \linebreak
-Konya, Fundamental Sciences Education, from \textit{September
-  2013 to June 2017}.
-\section*{Techincal Capabilites}
+\section*{\textsc{Education}}
+Galatasaray University, Istanbul, Department of Mathematics
+(\textit{French}), Faculty of
+Arts and Sciences, since \textit{September 2017}.
+%
+%Osman Nuri Hekimoğlu Anatolian High School, Konya, Fundamental Sciences
+%Education, from \textit{September 2013 to June 2017}.
+\section*{\textsc{Technical Capabilites}}
 \begin{itemize}[leftmargin=*]
   \item Uses \texttt{Emacs} and \texttt{Vim} to great extent, to edit
   source code or any kind of plain text.
@@ -58,32 +73,45 @@ Konya, Fundamental Sciences Education, from \textit{September
   annotated calendars with it.
   \item Typesets wide variety of high quality document with \LaTeX. Uses
   \texttt{PGF/TikZ} to draw figures and graphs.
-  \item Uses free and open source software; \texttt{Parabola} for daily
-  driver, \texttt{OpenBSD} for servers.
+  \item Uses free and open source software; \texttt{Arch Linux} for daily
+    driver, \texttt{OpenBSD} for servers.
   \item Writes inductive/recursive definitions and undergraduate level
-  formal proofs with them in \texttt{Coq}.
+    formal proofs with them in \texttt{Lean} and \texttt{Coq}.
   \item Manages projects written in \texttt{C}, \texttt{Python},
   \texttt{Scheme} and beforementioned languages/systems with
   \texttt{git}.
   \item Reads, writes and speaks English and French fluently.
-  \item In particular, reads and writes materials in Computer Sciences,
-  Mathematics, Logic and Philosophy in fair range of sophistication.
+  %\item In particular, reads and writes materials in Computer Sciences,
+  %Mathematics, Logic and Philosophy in fair range of sophistication.
 \end{itemize}
-\section*{Interests}
+\section*{\textsc{Interests}}
 \begin{itemize}[leftmargin=*]
-  \item Reading and writing poems. Printable document of my poems compiled in a
-  booklet can be found at: \url{http://oneofvalts.sdf.org/media/}. For the
-  source code, visit its git
-  \href{https://github.com/oneofvalts/usavurdu}{repository}.
+  \item Reading and writing poems. Printable document of my poems
+    compiled in a book can be found at:
+    \url{http://oneofvalts.sdf.org/media/}. For the source code, visit
+    its git \href{https://github.com/oneofvalts/usavurdu}{repository}.
   \item Typesetting, typography and bookbinding.
   \item Fountain pens, inks and papers.
   \item Modal, microtonal music. Irish and Turkish Folk Music. I play one
-  of the fundamental, stringed instrument of Turkish Classical Music,
-  called
-  \href{https://en.wikipedia.org/wiki/Turkish_tambur}{\textit{tambur}}.
+    of the fundamental, stringed instrument of Turkish Classical Music,
+    called
+    \href{https://en.wikipedia.org/wiki/Turkish_tambur}{\textit{tambur}}.
 \end{itemize}
-\section*{Projects}
+\section*{\textsc{Projects}}
 \begin{itemize}[leftmargin=*]
+  \item As part of my graduation project, currently formalizing
+    Desargues' Theorem in Lean. Relevant repositories are
+    \href{https://github.com/oneofvalts/desargues-doc}{here} and
+    \href{https://github.com/oneofvalts/desargues}{here}.
+  \item I wrote proofs of some basic propositions on equivalence classes
+    and modular arithmetic in Coq. The code is
+    \href{https://github.com/oneofvalts/equivalence-classes}{here}.
+  \item I have a Youtube
+    \href{https://www.youtube.com/@veryarticulateloudthinker}{channel}
+    where I talk about \texttt{Lean} and document my journey of
+    formalizing Desargues's Theorem.
+  \item I typeset Cashmere Exchange's
+    \href{https://docsend.com/view/ryp2wmfc5yxaabep}{whitepaper}.
   \item I have a blog at \url{http://oneofvalts.sdf.org}.
   \item I initiated \textsc{hatirlana}, where a group of authors including me
   resumes the past month's intellectual happenings. It is a monthly
