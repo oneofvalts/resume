@@ -1,2 +1,4 @@
 # resume
-my resume
+
+Output PDF file is under my [directory](http://oneofvalts.sdf.org/media/)
+at SDF.
