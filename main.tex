@@ -1,29 +1,43 @@
-\documentclass[oneside]{memoir}
+%! TEX program = lualatex
+\documentclass[oneside, 11pt]{memoir}
 
 \newlength{\pagew}
 \newlength{\pageh}
 \setlength{\pagew}{210mm}
 \setlength{\pageh}{297mm}
 
-\setlength{\headheight}{16pt}
+\setlength{\headheight}{0pt}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\footskip}{0pt}
 
 \setstocksize{\pageh}{\pagew}
 \settrimmedsize{\pageh}{\pagew}{*}
-\settypeblocksize{250mm}{150mm}{*}
+\settypeblocksize{270mm}{170mm}{*}
 \setlrmargins{*}{*}{1}
 \setulmargins{*}{*}{1}
 \setmarginnotes{0cm}{0cm}{0cm}
 \checkandfixthelayout
 
+\setbeforesecskip{1em}
+\setaftersecskip{0.5em}
+
 \usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
-\setmainfont{EB Garamond}
+%\setmainfont{Cooper}[
+%BoldFont = Cooper-SemiBold.ttf,
+%ItalicFont = Cooper-Italic.ttf,
+%BoldItalicFont = Cooper-SemiBoldItalic.ttf
+%]
+\setmainfont{Junicode}
 \setmathfont{Garamond-Math.otf}[StylisticSet={7,9}]
-\setmonofont[Scale=MatchLowercase]{JetBrains Mono}
+\setmonofont[Scale=0.8]{Iosvmata Bold}
 \usepackage[letterspace=200]{microtype}
 
 \usepackage{enumitem}
 \usepackage[french]{babel}
 \usepackage{datetime2}
+
+\AtBeginDocument{\def\labelitemi{$\bullet$}}
 
 \usepackage[
 unicode,
@@ -31,9 +45,11 @@ pdfpagelabels,
 bookmarks,
 hyperindex,
 hyperfigures,
-colorlinks]{hyperref}
+%colorlinks
+]{hyperref}
 
 \begin{document}
+\pagestyle{empty}
 \pagenumbering{gobble}
 \twocolumn[
 \begin{@twocolumnfalse}
@@ -42,39 +58,49 @@ colorlinks]{hyperref}
     \textit{of}\\
     \textsc{\huge Abdullah Uyu} \\
     \vspace{2ex}
-    {\small Kordonboyu Mah.\ Ankara Cad.\ İstmarina S1 Kule No: 59
-      34860, Kartal/İstanbul. \\
-      \texttt{abdullahuyu@gmail.com}\quad +905531744219} \\
+    {\small Kordonboyu Mah.\ Ankara Cad.\ 147A 59
+      34860, Kartal/İstanbul \\
+      \texttt{abdullahuyu@gmail.com}\quad 05531744219} \\
     \vspace{5ex}
   \end{center}
 \end{@twocolumnfalse}
 ]
-\raggedright
 \section*{\textsc{Profile}}
-A self-disciplined mathematics senior passionate about Logic, interested
-in interrelations between the akin areas such as Computer Sciences,
-Philosophy and Linguistics, capable of communicating and working in great
+\noindent
+A self-disciplined mathematics senior passionate about data science and
+automation, capable of communicating and working in great
 efficiency with others, seeking opportunities to learn and study more
-intuitionistic logic, proof assistants such as \texttt{Lean}, and modern
-foundations of mathematics such as \texttt{HoTT}.
+databases, preferably with cloud solutions such as \texttt{AWS/DynamoDB}.
 \section*{\textsc{Education}}
+\noindent
 Galatasaray University, Istanbul, Department of Mathematics
 (\textit{French}), Faculty of
-Arts and Sciences, since \textit{September 2017}.
+Arts and Sciences, \textit{September 2017 -- June 2025}.
 %
 %Osman Nuri Hekimoğlu Anatolian High School, Konya, Fundamental Sciences
 %Education, from \textit{September 2013 to June 2017}.
 \section*{\textsc{Technical Capabilites}}
 \begin{itemize}[leftmargin=*]
+  \item Writes fluent \texttt{Python} and \texttt{R} for database
+    management, data analysis, web scraping and general automation.
+    Specifically, has great command on Python packages \texttt{pandas},
+    \texttt{matplotlib}, \texttt{seaborn}, \texttt{numpy},
+    \texttt{sympy}, \texttt{Flask} and \texttt{beautifulsoup4}; on R
+    package \texttt{ggplot2}.
+  \item Can compose complex, custom \texttt{SQL}.
+  \item Uses \texttt{sqlite3} and \texttt{psycopg2} for database
+    management.
+  \item Can implement agent-based models with Python \texttt{Mesa}
+    package.
   \item Uses \texttt{Emacs} and \texttt{Vim} to great extent, to edit
   source code or any kind of plain text.
   \item Plans and conducts projects with \texttt{Emacs/OrgMode}.
-  Produces useful physical documents such as agenda reports and
-  annotated calendars with it.
+  Produces agenda reports and annotated calendars with it.
   \item Typesets wide variety of high quality document with \LaTeX. Uses
   \texttt{PGF/TikZ} to draw figures and graphs.
   \item Uses free and open source software; \texttt{Arch Linux} for daily
-    driver, \texttt{OpenBSD} for servers.
+    driver, \texttt{OpenBSD} for servers. Has highly \textbf{tuned}
+    working environment for rapid prototyping.
   \item Writes inductive/recursive definitions and undergraduate level
     formal proofs with them in \texttt{Lean} and \texttt{Coq}.
   \item Manages projects written in \texttt{C}, \texttt{Python},
@@ -84,6 +110,7 @@ Arts and Sciences, since \textit{September 2017}.
   %\item In particular, reads and writes materials in Computer Sciences,
   %Mathematics, Logic and Philosophy in fair range of sophistication.
 \end{itemize}
+\pagebreak
 \section*{\textsc{Interests}}
 \begin{itemize}[leftmargin=*]
   \item Reading and writing poems. Printable document of my poems
@@ -99,19 +126,22 @@ Arts and Sciences, since \textit{September 2017}.
 \end{itemize}
 \section*{\textsc{Projects}}
 \begin{itemize}[leftmargin=*]
+  \item For a direct list of sources,
+    \href{https://github.com/oneofvalts}{here} is my Github profile.
   \item As part of my graduation project, currently formalizing
-    Desargues' Theorem in Lean. Relevant repositories are
+    \textbf{Desargues's Theorem in Lean}. Relevant repositories are
     \href{https://github.com/oneofvalts/desargues-doc}{here} and
     \href{https://github.com/oneofvalts/desargues}{here}.
   \item I wrote proofs of some basic propositions on equivalence classes
-    and modular arithmetic in Coq. The code is
+    and modular arithmetic in \texttt{Coq}. The code is
     \href{https://github.com/oneofvalts/equivalence-classes}{here}.
   \item I have a Youtube
     \href{https://www.youtube.com/@veryarticulateloudthinker}{channel}
     where I talk about \texttt{Lean} and document my journey of
     formalizing Desargues's Theorem.
   \item I typeset Cashmere Exchange's
-    \href{https://docsend.com/view/ryp2wmfc5yxaabep}{whitepaper}.
+    \href{https://docsend.com/view/ryp2wmfc5yxaabep}{whitepaper} with
+    \LaTeX, and formalized a process into mathematics.
   \item I have a blog at \url{http://oneofvalts.sdf.org}.
   \item I initiated \textsc{hatirlana}, where a group of authors including me
   resumes the past month's intellectual happenings. It is a monthly
