@@ -24,11 +24,11 @@
 
 \usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
 %\setmainfont{Cooper}[
-%BoldFont = Cooper-SemiBold.ttf,
+%BoldFont = Cooper-Medium.ttf,
 %ItalicFont = Cooper-Italic.ttf,
-%BoldItalicFont = Cooper-SemiBoldItalic.ttf
+%BoldItalicFont = Cooper-MediumItalic.ttf
 %]
-\setmainfont{Junicode}
+\setmainfont[Language=English]{Junicode}
 \setmathfont{Garamond-Math.otf}[StylisticSet={7,9}]
 \setmonofont[Scale=0.8]{Iosvmata Bold}
 \usepackage[letterspace=200]{microtype}
@@ -57,10 +57,15 @@ hyperfigures,
     \textsc{\textls{Curriculum vitae}} \\
     \textit{of}\\
     \textsc{\huge Abdullah Uyu} \\
-    \vspace{2ex}
-    {\small Kordonboyu Mah.\ Ankara Cad.\ 147A 59
-      34860, Kartal/İstanbul \\
-      \texttt{abdullahuyu@gmail.com}\quad 05531744219} \\
+    \vspace{1ex}
+    {\small
+      %Kordonboyu Mah.\ Ankara Cad.\ 147A 59
+      %34860,
+      \texttt{abdullahuyu@gmail.com}
+      \enspace
+      05531744219
+      \enspace
+    İstanbul}
     \vspace{5ex}
   \end{center}
 \end{@twocolumnfalse}
@@ -68,9 +73,11 @@ hyperfigures,
 \section*{\textsc{Profile}}
 \noindent
 A self-disciplined mathematics senior passionate about data science and
-automation, capable of communicating and working in great
-efficiency with others, seeking opportunities to learn and study more
-databases, preferably with cloud solutions such as \texttt{AWS/DynamoDB}.
+automation, capable of communicating and working in great efficiency with
+others, seeking opportunities to learn and study more backend
+development, preferably with \texttt{Go} along with \texttt{Redis};
+databases, preferably with cloud solutions such as \texttt{AWS/Lambda}
+and \texttt{AWS/DynamoDB}.
 \section*{\textsc{Education}}
 \noindent
 Galatasaray University, Istanbul, Department of Mathematics
@@ -81,6 +88,8 @@ Arts and Sciences, \textit{September 2017 -- June 2025}.
 %Education, from \textit{September 2013 to June 2017}.
 \section*{\textsc{Technical Capabilites}}
 \begin{itemize}[leftmargin=*]
+  \item Engineers API backends with \texttt{Go/Gin} and
+    \texttt{Python/Flask}.
   \item Writes fluent \texttt{Python} and \texttt{R} for database
     management, data analysis, web scraping and general automation.
     Specifically, has great command on Python packages \texttt{pandas},
@@ -113,16 +122,21 @@ Arts and Sciences, \textit{September 2017 -- June 2025}.
 \pagebreak
 \section*{\textsc{Interests}}
 \begin{itemize}[leftmargin=*]
-  \item Reading and writing poems. Printable document of my poems
-    compiled in a book can be found at:
-    \url{http://oneofvalts.sdf.org/media/}. For the source code, visit
-    its git \href{https://github.com/oneofvalts/usavurdu}{repository}.
-  \item Typesetting, typography and bookbinding.
-  \item Fountain pens, inks and papers.
-  \item Modal, microtonal music. Irish and Turkish Folk Music. I play one
-    of the fundamental, stringed instrument of Turkish Classical Music,
-    called
-    \href{https://en.wikipedia.org/wiki/Turkish_tambur}{\textit{tambur}}.
+  \item Software \textbf{verification}, \textbf{functional} programming
+    languages, \textbf{type} theory.
+  \item Usage of \textbf{topology} in data science.
+  \item \textbf{Automata} theory, specifically \textbf{cellular}
+    automata.
+  %\item Reading and writing poems. Printable document of my poems
+  %  compiled in a book can be found at:
+  %  \url{http://oneofvalts.sdf.org/media/}. For the source code, visit
+  %  its git \href{https://github.com/oneofvalts/usavurdu}{repository}.
+  %\item Typesetting, typography and bookbinding.
+  %\item Fountain pens, inks and papers.
+  %\item Modal, microtonal music. Irish and Turkish Folk Music. I play one
+  %  of the fundamental, stringed instrument of Turkish Classical Music,
+  %  called
+  %  \href{https://en.wikipedia.org/wiki/Turkish_tambur}{\textit{tambur}}.
 \end{itemize}
 \section*{\textsc{Projects}}
 \begin{itemize}[leftmargin=*]
@@ -137,22 +151,22 @@ Arts and Sciences, \textit{September 2017 -- June 2025}.
     \href{https://github.com/oneofvalts/equivalence-classes}{here}.
   \item I have a Youtube
     \href{https://www.youtube.com/@veryarticulateloudthinker}{channel}
-    where I talk about \texttt{Lean} and document my journey of
-    formalizing Desargues's Theorem.
+    where I talk about \texttt{Lean} and document the formalizing
+    Desargues's Theorem.
   \item I typeset Cashmere Exchange's
     \href{https://docsend.com/view/ryp2wmfc5yxaabep}{whitepaper} with
     \LaTeX, and formalized a process into mathematics.
   \item I have a blog at \url{http://oneofvalts.sdf.org}.
-  \item I initiated \textsc{hatirlana}, where a group of authors including me
-  resumes the past month's intellectual happenings. It is a monthly
-  publication, typeset in \LaTeX. It has a git
-  \href{https://github.com/oneofvalts/hatirlana}{repository}.
+  %\item I initiated \textsc{hatirlana}, where a group of authors including me
+  %resumes the past month's intellectual happenings. It is a monthly
+  %publication, typeset in \LaTeX. It has a git
+  %\href{https://github.com/oneofvalts/hatirlana}{repository}.
   \item I wrote \texttt{letter}, an ncurses program in \texttt{C}, for
   facilitating the bookkeeping of anagrammatic poems. It has a git
   \href{https://github.com/oneofvalts/letter}{repository}.
-  \item I host the radio show \textit{ferahfeza chronicles} at \texttt{sdf}'s
-  icecast internet radio \texttt{anonradio}, where I discuss Turkish
-  Classical Music and perform with tambur.
+  %\item I host the radio show \textit{ferahfeza chronicles} at \texttt{sdf}'s
+  %icecast internet radio \texttt{anonradio}, where I discuss Turkish
+  %Classical Music and perform with tambur.
 \end{itemize}
 \vfill\hfill{}\tiny\textit{Updated \today.}
 \end{document}
