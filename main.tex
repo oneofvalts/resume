@@ -1,5 +1,5 @@
 %! TEX program = lualatex
-\documentclass[oneside, 11pt]{memoir}
+\documentclass[oneside, 12pt]{memoir}
 
 \newlength{\pagew}
 \newlength{\pageh}
@@ -23,19 +23,30 @@
 \setaftersecskip{0.5em}
 
 \usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
-%\setmainfont{Cooper}[
-%BoldFont = Cooper-Medium.ttf,
-%ItalicFont = Cooper-Italic.ttf,
-%BoldItalicFont = Cooper-MediumItalic.ttf
-%]
-\setmainfont[Language=English]{Junicode}
-\setmathfont{Garamond-Math.otf}[StylisticSet={7,9}]
-\setmonofont[Scale=0.8]{Iosvmata Bold}
+
+%\setmainfont[Language=English]{Junicode}
+\setmainfont{Junicode SmExp}[
+Language=English,
+BoldFont = Junicode SmExp Bold,
+ItalicFont = Junicode SmExp Italic,
+BoldItalicFont = Junicode SmExp Bold Italic
+]
+
+%\setmathfont{Garamond-Math.otf}[StylisticSet={7,9}, Scale=MatchUppercase]
+%\setmathfont[range=it]{Junicode SmExp Italic}
+%\setmathrm{Garamond Libre}
+
+%\setmonofont[Scale=0.8]{Iosvmata Bold}
+\setmonofont[Scale=MatchLowercase]{Iosvmata Bold}
+
 \usepackage[letterspace=200]{microtype}
 
+%\setlength{\columnsep}{0.5cm}
+
 \usepackage{enumitem}
-\usepackage[french]{babel}
+\usepackage[english]{babel}
 \usepackage{datetime2}
+\usepackage{tcolorbox}
 
 \AtBeginDocument{\def\labelitemi{$\bullet$}}
 
@@ -53,120 +64,158 @@ hyperfigures,
 \pagenumbering{gobble}
 \twocolumn[
 \begin{@twocolumnfalse}
-  \begin{center}
-    \textsc{\textls{Curriculum vitae}} \\
-    \textit{of}\\
-    \textsc{\huge Abdullah Uyu} \\
-    \vspace{1ex}
-    {\small
-      %Kordonboyu Mah.\ Ankara Cad.\ 147A 59
-      %34860,
-      \texttt{abdullahuyu@gmail.com}
-      \enspace
-      05531744219
-      \enspace
-    İstanbul}
-    \vspace{5ex}
-  \end{center}
+    \begin{center}
+        \textsc{\textls{Curriculum vitae}} \\
+        \textit{of}\\
+        \textsc{\huge Abdullah Uyu} \\
+        \vspace{1ex}
+        {\small
+            %Kordonboyu Mah.\ Ankara Cad.\ 147A 59
+            %34860,
+            \texttt{abdullahuyu@gmail.com}
+            \enspace
+            05531744219
+            \enspace
+        İstanbul}
+        \vspace{5ex}
+    \end{center}
 \end{@twocolumnfalse}
 ]
 \section*{\textsc{Profile}}
 \noindent
-A self-disciplined mathematics senior passionate about data science and
-automation, capable of communicating and working in great efficiency with
-others, seeking opportunities to learn and study more backend
-development, preferably with \texttt{Go} along with \texttt{Redis};
-databases, preferably with cloud solutions such as \texttt{AWS/Lambda}
-and \texttt{AWS/DynamoDB}.
+A self-disciplined mathematics graduate passionate about formal
+verification and AI, capable of communicating and working in great
+efficiency with others, seeking opportunities to gain more expericence in
+data science and formal side of AI.
 \section*{\textsc{Education}}
 \noindent
 Galatasaray University, Istanbul, Department of Mathematics
-(\textit{French}), Faculty of
-Arts and Sciences, \textit{September 2017 -- June 2025}.
+(\textit{French}) with graduation project on formalization.
+%,
+%Faculty of Arts and Sciences
+%,
+%\textit{September 2017 -- June 2025}.
 %
 %Osman Nuri Hekimoğlu Anatolian High School, Konya, Fundamental Sciences
 %Education, from \textit{September 2013 to June 2017}.
+%\section*{\textsc{Experience}}
+%\begin{itemize}[leftmargin=*]
+%    \item Uses free and open source software; \texttt{Arch Linux} for daily
+%        driver, \texttt{OpenBSD} for servers. Has \textbf{\~{}10 years} of
+%        experience with Unix-like systems.
+%    \item Familiar with enterprise systems \texttt{REHL}, \texttt{CentOS}
+%        and \texttt{OpenSUSE}.
+%    \item Manages systems with
+%        \texttt{ufw},
+%        \texttt{iptables},
+%        \texttt{firewalld},
+%        \texttt{systemd},
+%        and
+%        \texttt{cron}.
+%    \item Automates with \texttt{Bash}, \texttt{Perl} and
+%        \texttt{Python}.
+%\end{itemize}
 \section*{\textsc{Technical Capabilites}}
+\begin{tcolorbox}[left=2pt,right=2pt,top=2pt,bottom=2pt]
+    Crafts solutions to difficult math problems including undergraduate
+    group theory, real analysis problems and Project Euler problems with
+    \texttt{Python/SageMath} and \texttt{Wolfram/Mathematica}.
+\end{tcolorbox}
 \begin{itemize}[leftmargin=*]
-  \item Engineers API backends with \texttt{Go/Gin} and
-    \texttt{Python/Flask}.
-  \item Writes fluent \texttt{Python} and \texttt{R} for database
-    management, data analysis, web scraping and general automation.
-    Specifically, has great command on Python packages \texttt{pandas},
-    \texttt{matplotlib}, \texttt{seaborn}, \texttt{numpy},
-    \texttt{sympy}, \texttt{Flask} and \texttt{beautifulsoup4}; on R
-    package \texttt{ggplot2}.
-  \item Can compose complex, custom \texttt{SQL}.
-  \item Uses \texttt{sqlite3} and \texttt{psycopg2} for database
-    management.
-  \item Can implement agent-based models with Python \texttt{Mesa}
-    package.
-  \item Uses \texttt{Emacs} and \texttt{Vim} to great extent, to edit
-  source code or any kind of plain text.
-  \item Plans and conducts projects with \texttt{Emacs/OrgMode}.
-  Produces agenda reports and annotated calendars with it.
-  \item Typesets wide variety of high quality document with \LaTeX. Uses
-  \texttt{PGF/TikZ} to draw figures and graphs.
-  \item Uses free and open source software; \texttt{Arch Linux} for daily
-    driver, \texttt{OpenBSD} for servers. Has highly \textbf{tuned}
-    working environment for rapid prototyping.
-  \item Writes inductive/recursive definitions and undergraduate level
-    formal proofs with them in \texttt{Lean} and \texttt{Coq}.
-  \item Manages projects written in \texttt{C}, \texttt{Python},
-  \texttt{Scheme} and beforementioned languages/systems with
-  \texttt{git}.
-  \item Reads, writes and speaks English and French fluently.
-  %\item In particular, reads and writes materials in Computer Sciences,
-  %Mathematics, Logic and Philosophy in fair range of sophistication.
+    \item Has great command on Python packages
+        \texttt{sympy},
+        \texttt{pandas},
+        \texttt{matplotlib},
+        %\texttt{seaborn},
+        \texttt{numpy},
+        %\texttt{Flask}
+        and
+        \texttt{beautifulsoup4}; on R package
+        \texttt{ggplot2}.
+    %\item Crafts solutions to mathematical problems with
+    %    \texttt{Python/SageMath} and \texttt{Wolfram/Mathematica}.
+    \item Uses \texttt{Emacs} and \texttt{Vim} to great extent, to edit
+        source code or any kind of plain text.
+    \item Plans and conducts projects with \texttt{Emacs/OrgMode}.
+        Produces agenda reports and annotated calendars with it.
+    %\item Engineers API backends with \texttt{Go/Gin} and
+    %    \texttt{Python/Flask}.
+    %    Has highly \textbf{tuned} working environment for rapid prototyping.
+    %\item Writes fluent \texttt{Python} and \texttt{R} for database
+    %    management, data analysis, web scraping and general automation.
+    %\item Can compose complex, custom \texttt{SQL}.
+    %\item Uses \texttt{sqlite3} and \texttt{psycopg2} for database
+    %    management.
+    %\item Can implement agent-based models with Python \texttt{Mesa}
+    %    package.
+    \item Typesets wide variety of high quality document with \LaTeX. Uses
+        \texttt{PGF/TikZ} to draw figures and graphs.
+    \item Writes inductive/recursive definitions and undergraduate level
+        formal proofs with them in \texttt{Lean} and \texttt{Coq}.
+    \item Manages projects written in \texttt{C}, \texttt{Python},
+        \texttt{Scheme} and beforementioned languages/systems with
+        \texttt{git}.
+    \item \textbf{Fluent} in \textbf{English} and \textbf{French}.
+        %\item In particular, reads and writes materials in Computer Sciences,
+        %Mathematics, Logic and Philosophy in fair range of sophistication.
 \end{itemize}
 \pagebreak
 \section*{\textsc{Interests}}
 \begin{itemize}[leftmargin=*]
-  \item Software \textbf{verification}, \textbf{functional} programming
-    languages, \textbf{type} theory.
-  \item Usage of \textbf{topology} in data science.
-  \item \textbf{Automata} theory, specifically \textbf{cellular}
-    automata.
-  %\item Reading and writing poems. Printable document of my poems
-  %  compiled in a book can be found at:
-  %  \url{http://oneofvalts.sdf.org/media/}. For the source code, visit
-  %  its git \href{https://github.com/oneofvalts/usavurdu}{repository}.
-  %\item Typesetting, typography and bookbinding.
-  %\item Fountain pens, inks and papers.
-  %\item Modal, microtonal music. Irish and Turkish Folk Music. I play one
-  %  of the fundamental, stringed instrument of Turkish Classical Music,
-  %  called
-  %  \href{https://en.wikipedia.org/wiki/Turkish_tambur}{\textit{tambur}}.
+    %\item Modern package management systems such as \texttt{DNF} and
+    %    \texttt{pacman}.
+    %\item Experimenting with networking frameworks such as
+    %    \texttt{Zabbix}.
+    \item Software \textbf{verification}, \textbf{functional} programming
+        languages, \textbf{type} theory.
+    \item Usage of \textbf{topology} in data science.
+    \item \textbf{Automata} theory, specifically \textbf{cellular} automata.
+    %\item Reading and writing poems. Printable document of my poems
+    %    compiled in a book can be found at:
+    %    \url{http://oneofvalts.sdf.org/media/}. For the source code, visit
+    %    its git \href{https://github.com/oneofvalts/usavurdu}{repository}.
+    %\item Typesetting, typography and bookbinding.
+    %\item Fountain pens, inks and papers.
+    %\item Modal, microtonal music. Irish and Turkish Folk Music. I play one
+    %    of the fundamental, stringed instrument of Turkish Classical Music,
+    %    called
+    %    \href{https://en.wikipedia.org/wiki/Turkish_tambur}{\textit{tambur}}.
 \end{itemize}
 \section*{\textsc{Projects}}
-\begin{itemize}[leftmargin=*]
-  \item For a direct list of sources,
-    \href{https://github.com/oneofvalts}{here} is my Github profile.
-  \item As part of my graduation project, currently formalizing
+\begin{tcolorbox}[left=2pt,right=2pt,top=2pt,bottom=2pt]
+    As part of my graduation project, currently formalizing
     \textbf{Desargues's Theorem in Lean}. Relevant repositories are
     \href{https://github.com/oneofvalts/desargues-doc}{here} and
     \href{https://github.com/oneofvalts/desargues}{here}.
-  \item I wrote proofs of some basic propositions on equivalence classes
-    and modular arithmetic in \texttt{Coq}. The code is
-    \href{https://github.com/oneofvalts/equivalence-classes}{here}.
-  \item I have a Youtube
-    \href{https://www.youtube.com/@veryarticulateloudthinker}{channel}
-    where I talk about \texttt{Lean} and document the formalizing
-    Desargues's Theorem.
-  \item I typeset Cashmere Exchange's
-    \href{https://docsend.com/view/ryp2wmfc5yxaabep}{whitepaper} with
-    \LaTeX, and formalized a process into mathematics.
-  \item I have a blog at \url{http://oneofvalts.sdf.org}.
-  %\item I initiated \textsc{hatirlana}, where a group of authors including me
-  %resumes the past month's intellectual happenings. It is a monthly
-  %publication, typeset in \LaTeX. It has a git
-  %\href{https://github.com/oneofvalts/hatirlana}{repository}.
-  \item I wrote \texttt{letter}, an ncurses program in \texttt{C}, for
-  facilitating the bookkeeping of anagrammatic poems. It has a git
-  \href{https://github.com/oneofvalts/letter}{repository}.
-  %\item I host the radio show \textit{ferahfeza chronicles} at \texttt{sdf}'s
-  %icecast internet radio \texttt{anonradio}, where I discuss Turkish
-  %Classical Music and perform with tambur.
+\end{tcolorbox}
+\begin{itemize}[leftmargin=*]
+    \item For a direct list of sources,
+        \href{https://github.com/oneofvalts}{here} is my Github profile.
+    %\item As part of my graduation project, currently formalizing
+    %    \textbf{Desargues's Theorem in Lean}. Relevant repositories are
+    %    \href{https://github.com/oneofvalts/desargues-doc}{here} and
+    %    \href{https://github.com/oneofvalts/desargues}{here}.
+    \item I wrote proofs of some basic propositions on equivalence classes
+        and modular arithmetic in \texttt{Coq}. The code is
+        \href{https://github.com/oneofvalts/equivalence-classes}{here}.
+    \item I have a Youtube
+        \href{https://www.youtube.com/@veryarticulateloudthinker}{channel}
+        where I talk about \texttt{Lean} and document the formalizing
+        Desargues's Theorem.
+    \item I typeset Cashmere Exchange's
+        \href{https://docsend.com/view/ryp2wmfc5yxaabep}{whitepaper} with
+        \LaTeX, and formalized a process into mathematics.
+    \item I have a blog at \url{http://oneofvalts.sdf.org}.
+        %\item I initiated \textsc{hatirlana}, where a group of authors including me
+        %resumes the past month's intellectual happenings. It is a monthly
+        %publication, typeset in \LaTeX. It has a git
+        %\href{https://github.com/oneofvalts/hatirlana}{repository}.
+    \item I wrote \texttt{letter}, an ncurses program in \texttt{C}, for
+        facilitating the bookkeeping of anagrammatic poems. It has a git
+        \href{https://github.com/oneofvalts/letter}{repository}.
+        %\item I host the radio show \textit{ferahfeza chronicles} at \texttt{sdf}'s
+        %icecast internet radio \texttt{anonradio}, where I discuss Turkish
+        %Classical Music and perform with tambur.
 \end{itemize}
 \vfill\hfill{}\tiny\textit{Updated \today.}
 \end{document}
