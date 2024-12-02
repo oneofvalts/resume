@@ -1,19 +1,23 @@
 %! TEX program = lualatex
-\documentclass[oneside, 12pt]{memoir}
+\documentclass[oneside, 10pt]{memoir}
 
 \newlength{\pagew}
 \newlength{\pageh}
-\setlength{\pagew}{210mm}
-\setlength{\pageh}{297mm}
+%\setlength{\pagew}{210mm}
+%\setlength{\pageh}{297mm}
+\setlength{\pagew}{225mm}
+\setlength{\pageh}{180mm}
 
 \setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
 \setlength{\marginparsep}{0pt}
 \setlength{\marginparwidth}{0pt}
 \setlength{\footskip}{0pt}
 
 \setstocksize{\pageh}{\pagew}
 \settrimmedsize{\pageh}{\pagew}{*}
-\settypeblocksize{270mm}{170mm}{*}
+%\settypeblocksize{270mm}{170mm}{*}
+\settypeblocksize{170mm}{205mm}{*}
 \setlrmargins{*}{*}{1}
 \setulmargins{*}{*}{1}
 \setmarginnotes{0cm}{0cm}{0cm}
@@ -25,12 +29,16 @@
 \usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
 
 %\setmainfont[Language=English]{Junicode}
-\setmainfont{Junicode SmExp}[
-Language=English,
-BoldFont = Junicode SmExp Bold,
-ItalicFont = Junicode SmExp Italic,
-BoldItalicFont = Junicode SmExp Bold Italic
-]
+%\setmainfont{Junicode SmExp}[
+%Language=English,
+%BoldFont = Junicode SmExp Bold,
+%ItalicFont = Junicode SmExp Italic,
+%BoldItalicFont = Junicode SmExp Bold Italic
+%]
+
+\setmainfont{Cabin}
+%\setmainfont{TeX Gyre Heros}
+%\setmainfont{Free Sans}
 
 %\setmathfont{Garamond-Math.otf}[StylisticSet={7,9}, Scale=MatchUppercase]
 %\setmathfont[range=it]{Junicode SmExp Italic}
@@ -48,6 +56,9 @@ BoldItalicFont = Junicode SmExp Bold Italic
 \usepackage{datetime2}
 \usepackage{tcolorbox}
 
+%\usepackage[pass, showframe]{geometry}
+
+% Adjust bullets
 \AtBeginDocument{\def\labelitemi{$\bullet$}}
 
 \usepackage[
@@ -74,9 +85,9 @@ hyperfigures,
             %34860,
             \texttt{abdullahuyu@gmail.com}
             \enspace
-            05531744219
+            +905531744219
             \enspace
-        İstanbul}
+        İstanbul/Turkey}
         \vspace{5ex}
     \end{center}
 \end{@twocolumnfalse}
@@ -87,10 +98,16 @@ A self-disciplined mathematics graduate passionate about formal
 verification and AI, capable of communicating and working in great
 efficiency with others, seeking opportunities to gain more expericence in
 data science and formal side of AI.
+\section*{\textsc{Experience}}
+\noindent
+\textbf{Ziraat Teknoloji.}
+Business Intelligence Internship at Data Warehouse Department
+(October 2024 -- June 2025)
 \section*{\textsc{Education}}
 \noindent
 Galatasaray University, Istanbul, Department of Mathematics
-(\textit{French}) with graduation project on formalization.
+(\textit{French})
+\textit{with graduation project on formalization, see \textsc{Projects}.}
 %,
 %Faculty of Arts and Sciences
 %,
@@ -116,11 +133,11 @@ Galatasaray University, Istanbul, Department of Mathematics
 %        \texttt{Python}.
 %\end{itemize}
 \section*{\textsc{Technical Capabilites}}
-\begin{tcolorbox}[left=2pt,right=2pt,top=2pt,bottom=2pt]
-    Crafts solutions to difficult math problems including undergraduate
-    group theory, real analysis problems and Project Euler problems with
-    \texttt{Python/SageMath} and \texttt{Wolfram/Mathematica}.
-\end{tcolorbox}
+%\begin{tcolorbox}[arc=0pt,outer arc=0pt,left=1pt,right=1pt,top=1pt,bottom=1pt]
+%    Crafts solutions to difficult math problems including undergraduate
+%    group theory, real analysis problems and Project Euler problems with
+%    \texttt{Python/SageMath} and \texttt{Wolfram/Mathematica}.
+%\end{tcolorbox}
 \begin{itemize}[leftmargin=*]
     \item Has great command on Python packages
         \texttt{sympy},
@@ -130,13 +147,17 @@ Galatasaray University, Istanbul, Department of Mathematics
         \texttt{numpy},
         %\texttt{Flask}
         and
-        \texttt{beautifulsoup4}; on R package
+        %\texttt{beautifulsoup4}
+        ;
+        on R package
         \texttt{ggplot2}.
-    %\item Crafts solutions to mathematical problems with
-    %    \texttt{Python/SageMath} and \texttt{Wolfram/Mathematica}.
+    \item Crafts solutions to difficult math problems including undergraduate
+        group theory, real analysis problems and Project Euler problems with
+        \texttt{Python/SageMath} and \texttt{Wolfram/Mathematica}.
     \item Uses \texttt{Emacs} and \texttt{Vim} to great extent, to edit
         source code or any kind of plain text.
-    \item Plans and conducts projects with \texttt{Emacs/OrgMode}.
+    \item Plans and conducts projects with \texttt{OrgMode} in
+        \texttt{Emacs}.
         Produces agenda reports and annotated calendars with it.
     %\item Engineers API backends with \texttt{Go/Gin} and
     %    \texttt{Python/Flask}.
@@ -159,7 +180,7 @@ Galatasaray University, Istanbul, Department of Mathematics
         %\item In particular, reads and writes materials in Computer Sciences,
         %Mathematics, Logic and Philosophy in fair range of sophistication.
 \end{itemize}
-\pagebreak
+%\pagebreak
 \section*{\textsc{Interests}}
 \begin{itemize}[leftmargin=*]
     %\item Modern package management systems such as \texttt{DNF} and
@@ -182,7 +203,7 @@ Galatasaray University, Istanbul, Department of Mathematics
     %    \href{https://en.wikipedia.org/wiki/Turkish_tambur}{\textit{tambur}}.
 \end{itemize}
 \section*{\textsc{Projects}}
-\begin{tcolorbox}[left=2pt,right=2pt,top=2pt,bottom=2pt]
+\begin{tcolorbox}[arc=0pt,outer arc=0pt,left=1pt,right=1pt,top=1pt,bottom=1pt]
     As part of my graduation project, currently formalizing
     \textbf{Desargues's Theorem in Lean}. Relevant repositories are
     \href{https://github.com/oneofvalts/desargues-doc}{here} and
@@ -203,7 +224,9 @@ Galatasaray University, Istanbul, Department of Mathematics
         where I talk about \texttt{Lean} and document the formalizing
         Desargues's Theorem.
     \item I typeset Cashmere Exchange's
-        \href{https://docsend.com/view/ryp2wmfc5yxaabep}{whitepaper} with
+        %\href{https://docsend.com/view/ryp2wmfc5yxaabep}{whitepaper}
+        whitepaper
+        with
         \LaTeX, and formalized a process into mathematics.
     \item I have a blog at \url{http://oneofvalts.sdf.org}.
         %\item I initiated \textsc{hatirlana}, where a group of authors including me
